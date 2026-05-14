@@ -33,7 +33,7 @@ describe Falcon::Middleware::Proxy do
 		]
 		proxy.prepare_headers(headers)
 		expect(headers["authorization"]).to be == "Bearer application"
-		expect(headers["proxy-authorization"]).to be == nil
+		expect(headers["proxy-authorization"]).to be_nil
 	end
 	
 	it "can select client based on authority" do
